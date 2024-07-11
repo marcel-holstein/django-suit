@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='django-suit-v2-pm',
+    name='django-suit',
     version=__import__('suit').VERSION,
     description='Modern theme for Django admin interface.',
     author='Kaspars Sprogis (darklow) forked by Pulse-Mind',
