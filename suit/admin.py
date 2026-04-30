@@ -45,8 +45,6 @@ def get_related_field(name, short_description=None, admin_order_field=None, admi
 
     getter.admin_order_field = admin_order_field or name
     getter.short_description = short_description or related_names[-1].title().replace('_', ' ')
-    if as_link:
-        getter.allow_tags = True
     return getter
 
 

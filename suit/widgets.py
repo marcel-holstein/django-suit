@@ -17,7 +17,7 @@ class AutosizedTextarea(Textarea):
         return forms.Media(js=('suit/js/autosize.min.js',))
 
     def render(self, name, value, attrs=None, renderer=None):
-        output = super(AutosizedTextarea, self).render(name, value, attrs)
+        output = super(AutosizedTextarea, self).render(name, value, attrs, renderer)
         output += mark_safe(
             "<script type=\"text/javascript\">django.jQuery(function () { autosize(document.getElementById('id_%s')); });</script>"
             % name)
@@ -30,7 +30,7 @@ class CharacterCountTextarea(AutosizedTextarea):
     """
 
     def render(self, name, value, attrs=None, renderer=None):
-        output = super(CharacterCountTextarea, self).render(name, value, attrs,)
+        output = super(CharacterCountTextarea, self).render(name, value, attrs, renderer)
         output += mark_safe(
             "<script type=\"text/javascript\">django.jQuery(function () { django.jQuery('#id_%s').suitCharactersCount(); });</script>"
             % name)
@@ -70,7 +70,7 @@ class EnclosedInput(TextInput):
         return '<span class="input-group-%s"%s>%s</span>' % (wrapper_class, "onclick="+self.onclick_append if self.onclick_append else "", value)
 
     def render(self, name, value, attrs=None, renderer=None):
-        output = super(EnclosedInput, self).render(name, value, attrs)
+        output = super(EnclosedInput, self).render(name, value, attrs, renderer)
         if self.prepend:
             self.prepend = self.enclose_value(self.prepend, self.prepend_class)
             output = '<span class="input-group-text">%s</span>%s' % (self.prepend, output)
