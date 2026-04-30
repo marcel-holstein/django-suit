@@ -2606,7 +2606,7 @@ fieldset textarea.vURLField,
 fieldset textarea.vLargeTextField,
 fieldset textarea.vTimeField,
 fieldset textarea.vDateField {
-  min-height: calc(1.5em + 0.75rem + 2px);
+  min-height: calc(3em + 0.75rem + 2px);
 }
 textarea.form-control-sm {
   min-height: calc(1.5em + 0.5rem + 2px);
@@ -6993,6 +6993,7 @@ fieldset textarea.vLargeTextField,
 fieldset textarea.vTimeField,
 fieldset textarea.vDateField {
   line-height: 1.5;
+  min-height: calc(3em + 0.75rem + 2px);
 }
 
 fieldset {
