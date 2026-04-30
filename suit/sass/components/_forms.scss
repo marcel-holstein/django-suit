@@ -7,6 +7,7 @@ $suit-padding-first-extra: .25rem;
 textarea.form-control {
   line-height: $textarea-line-height;
   min-height: calc(3em + 0.75rem + 2px);
+  resize: vertical !important;
 }
 
 fieldset {

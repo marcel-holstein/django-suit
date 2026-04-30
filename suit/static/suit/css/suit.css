@@ -6994,6 +6994,7 @@ fieldset textarea.vTimeField,
 fieldset textarea.vDateField {
   line-height: 1.5;
   min-height: calc(3em + 0.75rem + 2px);
+  resize: vertical !important;
 }
 
 fieldset {
