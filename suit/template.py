@@ -7,7 +7,7 @@ _cache = {}
 class Loader(FilesystemLoader):
     is_usable = True
 
-    def get_template_sources(self, template_name, template_dirs=None):
+    def get_template_sources(self, template_name):
         """
         Returns the absolute paths to "template_name" in the specified app.
         If the name does not contain an app name (no colon), an empty list

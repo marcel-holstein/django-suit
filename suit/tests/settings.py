@@ -43,6 +43,7 @@ TEMPLATES = [
 
 SITE_ID = 1
 SECRET_KEY = 'secret-key'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 ROOT_URLCONF = 'suit.tests.urls'
 # STATIC_URL = '/site_media/static/'

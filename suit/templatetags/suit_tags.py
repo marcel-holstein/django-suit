@@ -1,14 +1,9 @@
-import django
 from django import template
 from django.utils.safestring import mark_safe
 from suit import config
 
 register = template.Library()
-
-if django.VERSION < (1, 9):
-    simple_tag = register.assignment_tag
-else:
-    simple_tag = register.simple_tag
+simple_tag = register.simple_tag
 
 
 @register.filter(name='suit_conf')
